@@ -1,17 +1,36 @@
-class Student(object):#inheritance
-    def __init__(self,id,fName,lName,county="KE"):
-    	self.__id=id
-    	self.fname=fName
-    	self.lName=lName
+import time
+
+
+class Student(object):
+    country = {
+        'KE': 'Kenya',
+        'NG': 'Nigeria',
+        'UG': 'Uganda',
+        'TZ': 'Tanzania'
+        }
+    class_list=[]
+    myId=0
+    def __init__(self,fName,lName,cc="KE"):
+        Student.myId+=1
+        self.id=Student.myId
+        self.fName=fName
+        self.lName=lName
+        self.country = country[cc]
 
     def attend_class(self, **kwargs):
-    	'''
-    	default values:
-    	 loc = 'Hogwarts'
-    	 date= current_date
-    	 teacher='alex'
-    	'''
-    	pass
-
-s1 = Student(1,'manuh','muthui')
-s1 = Student(1,'allan','m','ug')
+        self.loc=kwargs.setdefault('loc','Hogwarts')
+        self.date=kwargs.setdefault("date", time.strftime("%c"))
+        self.teacher=kwargs.setdefault('teacher','alex')
+        Student.class_list.append(kwargs)
+    '''  
+    def specific_day_attendees(self, date=time.strftime("%c"):
+        for item in Student.class_list:
+            if item["date"]==date:
+                print(item)
+                               
+     '''  
+    S=Student('KAKAKS','SGSGSG')
+    S.attend_class(loc='Dadadad')
+    print( S.attend_class(loc='Dadadad'))
+        
+    
