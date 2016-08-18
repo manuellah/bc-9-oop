@@ -22,15 +22,11 @@ class Student(object):
         self.date=kwargs.setdefault("date", time.strftime("%c"))
         self.teacher=kwargs.setdefault('teacher','alex')
         Student.class_list.append(kwargs)
-    '''  
+      
     def specific_day_attendees(self, date=time.strftime("%c"):
         for item in Student.class_list:
             if item["date"]==date:
                 print(item)
                                
-     '''  
-    S=Student('KAKAKS','SGSGSG')
-    S.attend_class(loc='Dadadad')
-    print( S.attend_class(loc='Dadadad'))
-        
+      
     
