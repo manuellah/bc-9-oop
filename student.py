@@ -15,18 +15,36 @@ class Student(object):
         self.id=Student.myId
         self.fName=fName
         self.lName=lName
-        self.country = country[cc]
+        self.applcant_country = Student.country[cc]
 
     def attend_class(self, **kwargs):
         self.loc=kwargs.setdefault('loc','Hogwarts')
         self.date=kwargs.setdefault("date", time.strftime("%c"))
         self.teacher=kwargs.setdefault('teacher','alex')
-        Student.class_list.append(kwargs)
+        Student.class_list.append((self.date,self.fName,self.lName,self.id,self.loc,self.teacher))
       
-    def specific_day_attendees(self, date=time.strftime("%c"):
+   
+    def specific_day_attendees(self, date=time.strftime("%c")):
         for item in Student.class_list:
-            if item["date"]==date:
+            if item[0]==date:
                 print(item)
+
                                
       
     
+"""s=Student("namwe","Muthui")
+s1=Student("iiittii","hfdhdhd")
+s2=Student("namwe","erere")
+s3=Student("ksks","Mmddmd")
+s4=Student("mamaam","Mmddmd")
+
+s.attend_class(loc='manhuh')
+s1.attend_class(loc='manhuh')
+s2.attend_class(loc='vanhalla')
+s3.attend_class(loc='Training room')
+s4.attend_class(loc='manhuh')"""
+
+
+
+                               
+                               
