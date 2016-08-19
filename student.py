@@ -30,19 +30,7 @@ class Student(object):
                 print(item)
 
                                
-      
-    
-"""s=Student("namwe","Muthui")
-s1=Student("iiittii","hfdhdhd")
-s2=Student("namwe","erere")
-s3=Student("ksks","Mmddmd")
-s4=Student("mamaam","Mmddmd")
 
-s.attend_class(loc='manhuh')
-s1.attend_class(loc='manhuh')
-s2.attend_class(loc='vanhalla')
-s3.attend_class(loc='Training room')
-s4.attend_class(loc='manhuh')"""
 
 
 
